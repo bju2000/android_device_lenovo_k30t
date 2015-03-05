@@ -72,6 +72,9 @@ PRODUCT_COPY_FILES += \
     device/lenovo/k30t/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/lenovo/k30t/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+
 # Logmask
 PRODUCT_COPY_FILES += \
     device/lenovo/k30t/etc/logmask/default_diag_mask.cfg:system/etc/logmask/default_diag_mask.cfg \

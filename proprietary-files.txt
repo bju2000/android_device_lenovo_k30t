@@ -935,6 +935,7 @@ vendor/lib/libwfduibcsrcinterface.so
 # WiFi
 bin/ptt_socket_app
 bin/wcnss_filter
+bin/wcnss_service
 bin/wlan_detect
 xbin/wifi_aging
 xbin/wifi_power_off
