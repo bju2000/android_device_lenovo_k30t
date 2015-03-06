@@ -111,7 +111,24 @@ case "$baseband" in
         ;;
 esac
 
-start_sensors
+# start sensor related operation when the device is not X5
+if [ $(getprop ro.boot.hwversion | grep -e 5[0-9]) ]; then
+    /system/bin/log -p e -t "SensorSelect" "Device is X5, not call 'start_sensors'"
+else
+    /system/bin/log -p e -t "SensorSelect" "Device is not X5, call 'start_sensors'"
+    start_sensors
+fi
+
+if [ $(getprop ro.boot.hwversion | grep -e 4[0-9]) ]; then
+    echo 20 > /sys/class/leds/button-backlight/max_brightness
+    echo 20 > /sys/class/leds/button-backlight1/max_brightness
+fi
+
+# update the brightness to meet the requirement from HW
+if [ $(getprop ro.boot.hwversion | grep -e 5[0-9]) ]; then
+    echo 70 > /sys/class/leds/button-backlight/max_brightness
+    echo 70 > /sys/class/leds/button-backlight1/max_brightness
+fi
 
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")

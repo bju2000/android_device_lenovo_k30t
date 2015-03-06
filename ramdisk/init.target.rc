@@ -181,5 +181,17 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    group radio net_raw diag qcom_diag log
    disabled
 
+service sensorext /system/bin/sensorextd
+    class late_start
+    user root
+    group root
+    disabled
+
+service wait4sensorhub /system/bin/wait4sensorhub.sh
+    class late_start
+    user root
+    group root
+    oneshot
+
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
