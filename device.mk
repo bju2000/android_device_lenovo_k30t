@@ -368,10 +368,11 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libcurl \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    libxml2 \
+    libwcnss_service \
+    libwpa_client \
+    hostapd \
+    wpa_supplicant \
+    wpa_supplicant.conf \
     wcnss_service
 
 PRODUCT_PACKAGES += \
