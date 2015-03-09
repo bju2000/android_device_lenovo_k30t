@@ -104,8 +104,6 @@ persist.audio.fluence.speaker=true
 tunnel.audio.encode = false
 #Buffer size in kbytes for compress offload playback
 audio.offload.buffer.size.kb=32
-#use VERY_HIGH_QUALITY for audio resampler
-af.resampler.quality=4
 #Enable offload audio video playback by default
 av.offload.enable=false
 #enable voice path for PCM VoIP by default
@@ -166,28 +164,6 @@ ro.lenovo.videocall=false
 ro.lenovo.adb=apkctl
 ro.lenovo.series=Lenovo K30-T
 #wt custom default by xiongyulin@20140905
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
-persist.radio.multisim.config=dsds
-ro.com.android.mobiledata=false
-ro.vendor.extension_library=/vendor/lib/libqc-opt.so
-persist.sys.logkit.ctrlcode=0
-persist.backgrounddata.enable=false
-persist.lenovo.ltetype=SGLTE
-swe.reverie_text_shaper=1
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.services.location
-ro.gps.agps_provider=1
-ro.pip.gated=0
-persist.radio.calls.on.ims=0
-persist.radio.jbims=0
-persist.radio.csvt.enabled=false
-persist.radio.custom_ecc=1
-persist.radio.rat_on=combine
-persist.radio.mt_sms_ack=20
-
 
 #
 # Properties to overwrite (Default)
